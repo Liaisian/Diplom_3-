@@ -12,7 +12,6 @@ class TestAccount:
     def test_go_to_personal_account(self, driver):
         account = AccountPage(driver)
         account.go_to_login_page()
-        time.sleep(10)
         account.get_current_url()
         expected_url = Endpoints.URL_LOGIN
         current_url = account.get_current_url()
